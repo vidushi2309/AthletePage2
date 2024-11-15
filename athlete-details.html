@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Athlete Details</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Athlete Profile</h1>
+        
+        <section>
+            <h2>Upload Athlete Image</h2>
+            <input type="file" id="athlete-image" accept="image/*" onchange="previewImage()">
+            <img id="athlete-image-preview" src="" alt="Preview Image" style="max-width: 200px;"/>
+        </section>
+
+        <section>
+            <h2>Athlete Details</h2>
+            <input type="text" id="athlete-name" placeholder="Name" required>
+            <input type="number" id="athlete-age" placeholder="Age" required>
+            <input type="text" id="athlete-height" placeholder="Height" required>
+            <input type="text" id="athlete-sport" placeholder="Sport" required>
+            <textarea id="athlete-achievements" placeholder="Achievements" required></textarea>
+            <input type="text" id="athlete-address" placeholder="Address" required>
+            <input type="tel" id="athlete-phone" placeholder="Phone Number" required>
+            <button onclick="saveAthleteDetails()">Save</button>
+        </section>
+
+        <div id="athlete-success-message"></div>
+    </div>
+
+    <script src="athlete-details.js"></script>
+</body>
+</html>
